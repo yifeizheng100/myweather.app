@@ -1,0 +1,122 @@
+@font-face {
+  font-family: 'MeteoconsRegular';
+  src: url('../fonts/meteocons-webfont.eot');
+  src: url('../fonts/meteocons-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/meteocons-webfont.woff') format('woff'),
+    url('../fonts/meteocons-webfont.ttf') format('truetype'),
+    url('../fonts/meteocons-webfont.svg#MeteoconsRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+a.weather-icon {
+  font-size: 4rem;
+  color: white;
+}
+
+.weather-icon-holder {
+  padding: 1.4rem !important;
+  padding-top: 2.5rem !important;
+}
+
+.weather-icon:before {
+  font-family: 'MeteoconsRegular';
+  content: attr(data-icon);
+}
+
+.loading-back {
+  background: #324259 !important;
+  height: -webkit-fill-available;
+}
+
+.loading-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100px;
+  height: 100px;
+  color: #324259;
+  margin: 6.5% 0 0 -65px;
+}
+
+.loading-text:after {
+  background: trasparent;
+  width: 140%;
+  height: 140%;
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  color: white;
+}
+
+.loading-indicator {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -60px 0 0 -60px;
+  background: #324259;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  border: 10px solid #87e4ea;
+  box-shadow: inset 0 0 15px 11px hsla(1, 35%, 23%, 1);
+}
+
+.loading-indicator:after {
+  content: "";
+  background: trasparent;
+  width: 140%;
+  height: 140%;
+  position: absolute;
+  border-radius: 100%;
+  top: -20%;
+  left: -20%;
+  opacity: .7;
+  box-shadow: -4px -5px 3px -3px hsla(0, 0%, 0%, 0.93);
+  -webkit-animation: rotate 2s linear infinite;
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+.humidityText {
+  color: #00acc1 !important
+}
+
+.arrowClass {
+  margin: 0rem !important;
+  margin-left: 1rem !important;
+  margin-right: 2rem !important;
+}
+
+button:disabled {
+  background-color: gray !important;
+  display: none !important;
+}
+
+.formArea {
+  margin-right: 10% !important;
+}
+
+.weatherFancy:hover {
+  cursor: pointer;
+  box-shadow: 0px 5px 17px 8px rgba(0, 0, 0, 0.14);
+}
+
+@media only screen and (max-width: 800px) {
+  .arrowClass {
+    margin: 0rem !important;
+  }
+
+  .formArea {
+    margin-right: 5% !important;
+  }
+}
